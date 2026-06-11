@@ -83,7 +83,12 @@ def calc_clp_loss(model, t_colloc, x_colloc, alpha):
 
 
 def main():
-    device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+    if torch.cuda.is_available():
+        device = torch.device("cuda")
+    elif torch.backends.mps.is_available():
+        device = torch.device("mps")
+    else:
+        device = torch.device("cpu")
     print(device)
 
     alpha = 0.0005
