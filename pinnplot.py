@@ -34,7 +34,7 @@ def plot_solution(model, u_exact=None, t_range=(0.0, 1.0), x_range=(0.0, 1.0),
         if save:
             fig.savefig(save, dpi=150)
         plt.show()
-        return U_pinn
+        return
 
     U_exact = np.asarray(u_exact(T, X))
     vmin = min(U_pinn.min(), U_exact.min())
@@ -66,4 +66,3 @@ def plot_solution(model, u_exact=None, t_range=(0.0, 1.0), x_range=(0.0, 1.0),
     if save:
         fig.savefig(save, dpi=150)
     plt.show()
-    return U_pinn, U_exact
