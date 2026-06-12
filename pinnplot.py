@@ -19,7 +19,7 @@ def evaluer_modele(model, t_range=(0.0, 1.0), x_range=(0.0, 1.0), n=200, device=
 
 
 def plot_solution(model, u_exact=None, t_range=(0.0, 1.0), x_range=(0.0, 1.0),
-                  n=200, device=None, cmap="jet"):
+                  n=200, device=None, cmap="jet", save=None):
     T, X, U_pinn = evaluer_modele(model, t_range, x_range, n, device)
     extent = [t_range[0], t_range[1], x_range[0], x_range[1]]
 
@@ -31,6 +31,8 @@ def plot_solution(model, u_exact=None, t_range=(0.0, 1.0), x_range=(0.0, 1.0),
         ax.set_ylabel("x")
         plt.colorbar(im, ax=ax)
         plt.tight_layout()
+        if save:
+            fig.savefig(save, dpi=150)
         plt.show()
         return U_pinn
 
@@ -61,7 +63,7 @@ def plot_solution(model, u_exact=None, t_range=(0.0, 1.0), x_range=(0.0, 1.0),
     axes[2].set_xlabel("t")
     axes[2].set_ylabel("x")
     plt.colorbar(im2, ax=axes[2])
-
-    plt.tight_layout()
+    if save:
+        fig.savefig(save, dpi=150)
     plt.show()
     return U_pinn, U_exact
