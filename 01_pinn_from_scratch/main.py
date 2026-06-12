@@ -123,10 +123,10 @@ def main():
 
         if epoch % 100 == 0:
             print(f"Epoque {epoch:05d} | "
-                  f"Loss totale: {loss_totale.item():.6f} | "
-                  f"CLP: {loss_clp.item():.6f} | "
-                  f"BC: {loss_bc.item():.6f} | "
-                  f"IV: {loss_iv.item():.6f}")
+                  f"Loss totale: {loss_totale.item():.2e} | "
+                  f"CLP: {loss_clp.item():.2e} | "
+                  f"BC: {loss_bc.item():.2e} | "
+                  f"IV: {loss_iv.item():.2e}")
 
     return modele
 
