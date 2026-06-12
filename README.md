@@ -8,10 +8,10 @@ Résolution d'équations aux dérivées partielles et de problèmes inverses par
 |---|---|
 | `00_pinnde_experiments/` | Premières expériences avec la librairie [pinnDE](https://pinnde.readthedocs.io/) : équation de la chaleur 1D en problème direct et inverse (identification de la diffusivité α) |
 | `01_pinn_from_scratch/` | PINN implémenté en PyTorch pur : équation de la chaleur 1D, optimiseur Adam, loss pondérée (physique + conditions initiales + bords) |
-| `02_lbfgs_optimization/` | Entraînement avec L-BFGS (`torch.optim.LBFGS`), comparaison avec Adam *(à venir)* |
-| `03_hard_constraints/` | Contraintes dures vs PINN vanilla *(à venir)* |
-| `04_integro_differential/` | Équations intégro-différentielles, problème inverse RFE — cœur du stage *(à venir)* |
-| `cours_scmi/` | TP du cours SciML M2 (interpolation, incertitude, EDP) |
+| `02_hard_constraints/` | PINN à contraintes dures : conditions initiales et aux bords imposées par construction ($u = A + B \cdot N$), comparaison avec le PINN vanilla |
+| `03_lbfgs_optimization/` | Entraînement en deux phases Adam puis L-BFGS (`torch.optim.LBFGS`, recherche linéaire strong Wolfe), sur les versions vanilla et hard |
+| `04_inverse_heat/` | Problème inverse sur l'équation de la chaleur : identification de la diffusivité α à partir d'observations, en vanilla et en hard *(en cours)* |
+| `05_integro_differential/` | Équations intégro-différentielles, problème inverse RFE — cœur du stage *(à venir)* |
 
 ## Équation étudiée
 
