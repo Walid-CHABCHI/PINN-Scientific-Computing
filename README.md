@@ -1,26 +1,26 @@
 # PINN Scientific Computing
 
-Résolution d'équations aux dérivées partielles et de problèmes inverses par **Physics-Informed Neural Networks (PINNs)**, dans le cadre d'un stage de 8 semaines. L'objectif final est la résolution de problèmes inverses sur des équations intégro-différentielles (RFE). Toutes les implémentations sont faites from scratch en PyTorch.
+Solving partial differential equations and inverse problems using **Physics-Informed Neural Networks (PINNs)**, as part of an 8-week internship. The final goal is to solve inverse problems on integro-differential equations (RFE). All implementations are built from scratch in PyTorch.
 
-## Structure du projet
+## Project Structure
 
-| Dossier | Contenu |
+| Folder | Content |
 |---|---|
-| `00_pinnde_experiments/` | Premières expériences avec la librairie [pinnDE](https://pinnde.readthedocs.io/) : équation de la chaleur 1D en problème direct et inverse (identification de la diffusivité α) |
-| `01_pinn_from_scratch/` | PINN implémenté en PyTorch pur : équation de la chaleur 1D, optimiseur Adam, loss pondérée (physique + conditions initiales + bords) |
-| `02_hard_constraints/` | PINN à contraintes dures : conditions initiales et aux bords imposées par construction ($u = A + B \cdot N$), comparaison avec le PINN vanilla |
-| `03_lbfgs_optimization/` | Entraînement en deux phases Adam puis L-BFGS (`torch.optim.LBFGS`, recherche linéaire strong Wolfe), sur les versions vanilla et hard |
-| `04_inverse_heat/` | Problème inverse sur l'équation de la chaleur : identification de la diffusivité α à partir d'observations, en vanilla et en hard *(en cours)* |
-| `05_integro_differential/` | Équations intégro-différentielles, problème inverse RFE — cœur du stage *(à venir)* |
+| `00_pinnde_experiments/` | First experiments using the [pinnDE](https://pinnde.readthedocs.io/) library: 1D heat equation for both forward and inverse problems (identifying diffusivity α) |
+| `01_pinn_from_scratch/` | PINN implemented in pure PyTorch: 1D heat equation, Adam optimizer, weighted loss (physics + initial + boundary conditions) |
+| `02_hard_constraints/` | Hard-constrained PINN: initial and boundary conditions enforced by construction ($u = A + B \cdot N$), comparison with the vanilla PINN |
+| `03_lbfgs_optimization/` | Two-phase training using Adam followed by L-BFGS (`torch.optim.LBFGS` with strong Wolfe line search) on both vanilla and hard versions |
+| `04_inverse_heat/` | Inverse problem for the heat equation: identifying diffusivity α from observations, in vanilla and hard formulations *(ongoing)* |
+| `05_integro_differential/` | Integro-differential equations, RFE inverse problem — core of the internship *(upcoming)* |
 
-## Équation étudiée
+## Equation Studied
 
-Équation de la chaleur 1D :
+1D Heat Equation:
 
 $$\partial_t u = \alpha \, \partial_{xx} u, \quad x \in [0,1],\ t \in [0,1]$$
 
-avec conditions de Dirichlet homogènes et condition initiale sinusoïdale ou gaussienne.
+with homogeneous Dirichlet conditions and sinusoidal or Gaussian initial conditions.
 
-## Environnement
+## Environment
 
 Python 3.11 — PyTorch, TensorFlow/pinnDE, NumPy, Matplotlib.

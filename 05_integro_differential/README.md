@@ -1,3 +1,3 @@
-# Équations intégro-différentielles — problème inverse RFE
+# Integro-differential equations — RFE inverse problem
 
-*À venir* — cœur du stage : résolution de problèmes inverses sur des équations intégro-différentielles (RFE) par PINNs.
+*Upcoming* — core of the internship: solving inverse problems on integro-differential equations (RFE) using PINNs.
