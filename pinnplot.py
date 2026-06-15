@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import torch
 import matplotlib.pyplot as plt
@@ -32,6 +33,9 @@ def plot_solution(model, u_exact=None, t_range=(0.0, 1.0), x_range=(0.0, 1.0),
         plt.colorbar(im, ax=ax)
         plt.tight_layout()
         if save:
+            if not os.path.dirname(save):
+                os.makedirs("figures", exist_ok=True)
+                save = os.path.join("figures", save)
             fig.savefig(save, dpi=150)
         plt.show()
         return
@@ -64,5 +68,9 @@ def plot_solution(model, u_exact=None, t_range=(0.0, 1.0), x_range=(0.0, 1.0),
     axes[2].set_ylabel("x")
     plt.colorbar(im2, ax=axes[2])
     if save:
+        if not os.path.dirname(save):
+            os.makedirs("figures", exist_ok=True)
+            save = os.path.join("figures", save)
         fig.savefig(save, dpi=150)
     plt.show()
+

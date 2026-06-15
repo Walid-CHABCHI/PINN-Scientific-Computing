@@ -15,4 +15,4 @@ where $A = \sin(2\pi x)$ (satisfies initial and boundary conditions) and $B = t 
 | Max error vs exact solution | ~0.014 | **0.0002** |
 
 - `hard_pinn.ipynb` — full implementation and comparison
-- `solution_hard_pinn.png`, `loss_hard_pinn.png` — figures
+- `figures/solution_hard_pinn.png`, `figures/loss_hard_pinn.png` — figures
