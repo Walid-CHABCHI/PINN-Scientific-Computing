@@ -10,8 +10,8 @@ Solving partial differential equations and inverse problems using **Physics-Info
 | `01_pinn_from_scratch/` | PINN implemented in pure PyTorch: 1D heat equation, Adam optimizer, weighted loss (physics + initial + boundary conditions) |
 | `02_hard_constraints/` | Hard-constrained PINN: initial and boundary conditions enforced by construction ($u = A + B \cdot N$), comparison with the vanilla PINN |
 | `03_lbfgs_optimization/` | Two-phase training using Adam followed by L-BFGS (`torch.optim.LBFGS` with strong Wolfe line search) on both vanilla and hard versions |
-| `04_inverse_heat/` | Inverse problem for the heat equation: identifying diffusivity α from observations, in vanilla and hard formulations *(ongoing)* |
-| `05_integro_differential/` | Integro-differential equations, RFE inverse problem — core of the internship *(upcoming)* |
+| `04_inverse_heat/` | Inverse problem for the heat equation: identifying diffusivity α from observations, in vanilla and hard formulations |
+| `05_integro_differential/` | Integro-differential equations, RFE inverse problem — core of the internship *(ongoing)* |
 
 ## Equation Studied
 
