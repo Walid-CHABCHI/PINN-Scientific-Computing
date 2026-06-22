@@ -1,11 +1,6 @@
-flax==0.8.4
-jax==0.4.26
-jaxlib==0.4.26
-keras==3.14.1
-matplotlib==3.10.9
-ml-dtypes==0.3.2
+torch==2.12.0
 numpy==1.26.4
-optax==0.2.2
+matplotlib==3.10.9
 pinnde==1.2.0
 tensorflow==2.16.2
 tensorflow-macos==2.16.2
