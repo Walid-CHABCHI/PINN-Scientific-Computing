@@ -5,5 +5,3 @@ Identifying diffusivity α from solution observations in pure PyTorch: α become
 Two variants:
 - **vanilla** — loss = IV + BC + CLP(α) + data
 - **hard** — exact conditions by construction, loss = CLP(α) + data
-
-*(ongoing)*
