@@ -18,6 +18,8 @@ $$\partial_t u = \alpha \, \partial_{xx} u, \quad \alpha = 5\times 10^{-4}$$
 
 ## Usage
 
+
+Adaptation du bruit , Ablation pour la robustesse du bruit.
 ```bash
 python main.py
 ```
